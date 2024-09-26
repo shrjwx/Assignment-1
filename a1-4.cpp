@@ -47,6 +47,10 @@ int main() {
     int size2;
     cin >> size2;
 
+    if (size1 == 0 && size2 == 0){
+        cout << "Empty Array" << endl;
+        return 0;
+    }
     int arr1[size2];
     for (int i = 0; i < size2; ++i) {
         cin >> arr1[i];
