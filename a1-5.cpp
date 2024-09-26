@@ -1,3 +1,6 @@
+#include <iostream>
+using namespace std;
+
 class Stack {
 
     int* arr;
@@ -93,7 +96,11 @@ void rearrangeDisks(int n, Stack& A, Stack& B, Stack& C, char from, char to, cha
 
 int main() { // The main function has been defined for you, do not edit anything here.
     int n;
+<<<<<<< HEAD
    // cout << "Enter the number of disks: ";
+=======
+    // cout << "Enter the number of disks: ";
+>>>>>>> 9950a31 (it was the damn iostream stuff at the top)
     cin >> n;
 
     A = new Stack(n);
