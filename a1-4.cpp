@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <iomanip>
 
 using namespace std;
 
@@ -56,6 +57,21 @@ int main() {
         cin >> arr1[i];
     }
     
+    // Handle cases where one array is empty
+    if (size1 == 0) {
+        cout << fixed << setprecision(1);
+        cout << "Median = " << (size2 % 2 == 0 ? (arr1[size2 / 2 - 1] + arr1[size2 / 2]) / 2.0 : arr1[size2 / 2]) << endl;
+        return 0;
+    }
+    
+    if (size2 == 0) {
+        cout << fixed << setprecision(1);
+        cout << "Median = " << (size1 % 2 == 0 ? (arr[size1 / 2 - 1] + arr[size1 / 2]) / 2.0 : arr[size1 / 2]) << endl;
+        return 0;
+    }
+
+    // Output the median with fixed decimal precision
+    cout << fixed << setprecision(1);
     cout << "Median = " << findMedian(arr, size1, arr1, size2) << endl;
     
     return 0;
