@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 using namespace std;
 
 class Stack {
@@ -96,13 +97,15 @@ void rearrangeDisks(int n, Stack& A, Stack& B, Stack& C, char from, char to, cha
 
 int main() { // The main function has been defined for you, do not edit anything here.
     int n;
-<<<<<<< HEAD
    // cout << "Enter the number of disks: ";
-=======
     // cout << "Enter the number of disks: ";
->>>>>>> 9950a31 (it was the damn iostream stuff at the top)
-    cin >> n;
+    
 
+    if ( !(cin>>n) || n < 0 ) {
+       cout << "Invalid Input" << endl;
+       return 0;
+    }        
+    
     A = new Stack(n);
     B = new Stack(n);
     C = new Stack(n);
