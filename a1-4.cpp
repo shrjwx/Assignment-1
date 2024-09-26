@@ -71,7 +71,7 @@ int main() {
     }
 
     // Output the median with fixed decimal precision
-    cout << fixed << setprecision(1);
+    //cout << fixed << setprecision(1);
     cout << "Median = " << findMedian(arr, size1, arr1, size2) << endl;
     
     return 0;
