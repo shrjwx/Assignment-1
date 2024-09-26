@@ -102,10 +102,10 @@ int main() { // The main function has been defined for you, do not edit anything
     
 
     // cout << "Enter the number of disks: ";
-
+    bool false_type = std::cin.fail();
     cin >> n;
 
-    if ( !(cin>>n) || n < 0 ) {
+    if ( n<1 || false_type) {
        cout << "Invalid Input" << endl;
        return 0;
     }        
